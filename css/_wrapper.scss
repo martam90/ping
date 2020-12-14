@@ -1,0 +1,120 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: $spacing + 40;
+  text-align: center;
+
+  & > * {
+    max-width: inherit;
+  }
+
+  header {
+    text-align: center;
+
+    .text--large {
+      font-weight: 300;
+      color: $gray;
+      padding-top: $spacing + 20;
+      margin: 0;
+    }
+
+    .text--large--black {
+      color: black;
+      font-weight: 700;
+    }
+  }
+
+  .main__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__btn {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .input--email {
+    width: 100%;
+    border: 1px solid $paleblue;
+    border-radius: 16px;
+    margin-bottom: $spacing - 20;
+    padding: $spacing - 25;
+
+    &.error-state {
+      border: 1px solid $lightred;
+    }
+  }
+
+  .btn--blue {
+    background-color: $blue;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: $spacing - 25;
+    transition: ease-in-out 300ms;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 2px 2px 5px 2px $paleblue;
+      transition: ease-in-out 300ms;
+    }
+  }
+
+  .main__img {
+    display: block;
+    width: 100%;
+    padding: $spacing + 40 0;
+  }
+
+  .icons__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    .icons__item {
+      margin-left: $spacing - 30;
+    }
+
+    .fab {
+      border: 1px solid $paleblue;
+      border-radius: 50%;
+      padding: $spacing - 30;
+      color: $blue;
+      transition: transform ease-in-out 300ms;
+      transform: scale(1);
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: transform ease-in-out 300ms;
+      }
+    }
+  }
+
+  span {
+    color: $gray;
+    font-size: $fontsize - 4;
+    padding-top: $spacing - 10;
+  }
+
+  .error {
+    color: $lightred;
+    font-size: $fontsize - 5;
+    display: none;
+  }
+
+  .error.visible {
+    display: block;
+    text-align: left;
+    margin: 0 auto;
+    padding: $spacing 0;
+  }
+}
+
+.attribution {
+  font-size: $fontsize - 6;
+  text-align: center;
+}
